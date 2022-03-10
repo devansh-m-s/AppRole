@@ -6,10 +6,12 @@ jobs:
         steps:
             # ...
             - name: Import Secrets
-              uses: hashicorp/vault-action@v1
+              uses: hashicorp/vault-action@v2.3.1
               with:
                 url: http://65.1.112.91:8200
-                token: ${{ secrets.VaultToken }}
+                method: approle
+                roleId: a2150d77-2424-ab1e-0b06-fa0307f4c970
+                secretId: 63592c7d-86be-fbe7-ad29-2ee537dffc85
                 secrets: |
-                    secret/data/ci/private-token | PRIVATE_KEY ;
-                    secret/data/ci/public_token | PUBLIC_KEY ;
+                    secret/jenkins/github private-token | PRIVATE_KEY ;
+                    secret/jenkins/github public-token | PUBLIC_KEY ;
