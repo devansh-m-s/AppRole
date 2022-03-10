@@ -1,0 +1,15 @@
+on : [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        # ...
+        steps:
+            # ...
+            - name: Import Secrets
+              uses: hashicorp/vault-action@latest
+              with:
+                url: http://65.1.112.91:8200
+                token: ${{ secrets.VaultToken }}
+                secrets: |
+                    secret/data/ci/private-token | PRIVATE_KEY ;
+                    secret/data/ci/public_token | PUBLIC_KEY ;
