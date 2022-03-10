@@ -6,7 +6,7 @@ jobs:
         steps:
             # ...
             - name: Import Secrets
-              uses: hashicorp/vault-action@latest
+              uses: hashicorp/vault-action@v2
               with:
                 url: http://65.1.112.91:8200
                 token: ${{ secrets.VaultToken }}
