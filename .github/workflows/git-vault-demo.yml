@@ -13,5 +13,4 @@ jobs:
                 roleId: d6f0a26f-cde0-14a8-aa24-0eb2ca174d97
                 secretId: f8e9f026-43de-3f34-d4d4-5ceb3e19a1d9
                 secrets: |
-                    secret/jenkins/github private-token | PRIVATE_KEY ;
-                    secret/jenkins/github public-token | PUBLIC_KEY ;
+                    secret/github hello | HELLO ;
