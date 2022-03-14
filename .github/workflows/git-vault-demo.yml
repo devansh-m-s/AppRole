@@ -14,3 +14,4 @@ jobs:
                 secretId: ${{ secrets.secretId }}
                 secrets: |
                     secret/github hello | HELLO ;
+            - run: echo "Secrets --> ${{ env.HELLO }}"
