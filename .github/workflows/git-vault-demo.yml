@@ -11,6 +11,6 @@ jobs:
                 url: http://13.233.119.182:8200
                 method: approle
                 roleId: d6f0a26f-cde0-14a8-aa24-0eb2ca174d97
-                secretId: e2e3dae1-83aa-7d22-bcb0-0afa0f549a4b
+                secretId: 0439dcbe-d41e-c868-948b-6aeb7feab4b3
                 secrets: |
                     secret/github hello | HELLO
