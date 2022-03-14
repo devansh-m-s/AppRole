@@ -13,4 +13,4 @@ jobs:
                 roleId: ${{ secrets.roleId }}
                 secretId: ${{ secrets.secretId }}
                 secrets: |
-                    secret/github hello | HELLO
+                    secret/github hello | HELLO ;
