@@ -10,6 +10,7 @@ jobs:
               with:
                 url: http://13.233.119.182:8200
                 method: approle
+                role: employee
                 roleId: d6f0a26f-cde0-14a8-aa24-0eb2ca174d97
                 secretId: e2e3dae1-83aa-7d22-bcb0-0afa0f549a4b
                 secrets: |
