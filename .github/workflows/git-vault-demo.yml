@@ -1,0 +1,17 @@
+on : [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        # ...
+        steps:
+            # ...
+            - name: Import Secrets
+              uses: hashicorp/vault-action@v2.3.1
+              with:
+                url: http://13.233.119.182:8200
+                method: approle
+                roleId: ${{ secrets.roleId }}
+                secretId: ${{ secrets.secretId }}
+                secrets: |
+                    secret/github hello | HELLO ;
+            - run: echo "Secrets --> ${{ env.HELLO }}"
