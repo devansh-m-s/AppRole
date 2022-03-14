@@ -10,7 +10,7 @@ jobs:
               with:
                 url: http://13.233.119.182:8200
                 method: approle
-                roleId: d6f0a26f-cde0-14a8-aa24-0eb2ca174d97
-                secretId: 0439dcbe-d41e-c868-948b-6aeb7feab4b3
+                roleId: ${{ secrets.roleId }}
+                secretId: ${{ secrets.secretId }}
                 secrets: |
                     secret/github hello | HELLO
